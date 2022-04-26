@@ -1,3 +1,3 @@
 module.exports = {
-    streamDream: require('./streamDream_controller'),
+    streamDreams: require('./streamDreams_controller'),
 }

@@ -12,12 +12,12 @@
     <main class="container">
         <div>
             <div>
-                <% for (let i = 0; i < streamDream.length; i++) { %> 
-                    <% const stream = streamDream[i] %>
+                <% for (let i = 0; i < streamDreams.length; i++) { %> 
+                    <% const stream = streamDreams[i] %>
                     <div>
                         <img src=<%= stream.img %>  class="streamDream.img" alt="Stream Dream image" />
                         <h3>
-                            <a href="/streamDream/<%= i %> ">
+                            <a href="/streamDream/<%= streamDream._id %> ">
                                 <%= stream.artist %> 
                             </a>
                         </h3>
