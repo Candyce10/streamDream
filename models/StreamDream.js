@@ -44,12 +44,12 @@ const streamDream = [
     }, {
         artist: "Panic! At the Disco",
         img: "https://media.altpress.com/uploads/2018/10/panic-at-the-disco-2005.jpg",
-        headerImg: "https://i.pinimg.com/originals/44/22/aa/4422aaa483a88c4db84e265ad931a1b2.png',
+        headerImg: "https://i.pinimg.com/originals/44/22/aa/4422aaa483a88c4db84e265ad931a1b2.png'",
         bio:"Panic! at the Disco is the solo project of American musician Brendon Urie. It was originally a pop rock band from Las Vegas, Nevada, formed in 2004 by childhood friends Urie, Ryan Ross, Spencer Smith, and Brent Wilson. ",
         videos: [{
             song: "I Write Sins Not Tragedies",
             releaseDate:"2005",
-            link:"<iframe width='560' height='315' src="https://www.youtube.com/embed/vc6vs-l5dkc' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+            link:"<iframe width='560' height='315' src='https://www.youtube.com/embed/vc6vs-l5dkc' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
             album:"A Fever You Can't Sweat Out"
         }, {
             song: "High Hopes",
