@@ -16,7 +16,7 @@ app.use(methodOverride('_method'))
 
 app.use(express.urlencoded({ extended: false }))
 
-// app.use('/streamDream', controllers.streamDream)
+app.use('/streamDream', controllers.streamDream)
 
 
 
