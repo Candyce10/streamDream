@@ -7,43 +7,97 @@ const db = require('../models')
 
 // Index
 router.get('/', async (req, res, next) => {
-    res.send(`Welcome to StreamDream Hitting Index!`)
+    try {
+        const streamDreams = await db.StreamDream.find({});
+        const context = { products }
+        return res.render('index.ejs', context)
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
 })
 
 
 // New
 router.get('/new', async (req, res, next) => {
-    res.send(`Welcome to StreamDream Hitting New!`)
+    res.render('new.ejs')
 })
 
 
 // Create
 router.post('/', async (req, res, next) => {
-    res.send(`Welcome to StreamDream Hitting Create!`)
+    try {
+        const createStreamDream = await db.StreamDream.create(req.body);
+        res.redirect('/streamDream')
+
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
 })
 
 
 // Show
 router.get('/:streamDreamId', async (req, res, next) => {
-    res.send(`Welcome to StreamDream Hitting Id!`)
+    try {
+        const foundStreamDream = await db.StreamDream.findById(req.params.id)
+        const context = {
+            oneStreamDream: foundStreamDream
+        }
+        return res.render('show.ejs')
+
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
 })
 
 
 // Update
 router.put('/:streamDreamId', async (req, res, next) => {
-    res.send(`Welcome to StreamDream Hitting Update!`)
+    try {
+        const updatedStreamDream = await db.StreamDream.findByIdAndUpdate(req.params.id, req.body);
+        return res.redirect('/streamDream')
+
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
 })
 
 
 // Edit
 router.get('/:streamDreamId/edit', async (req, res, next) => {
-    res.send(`Welcome to StreamDream Hitting edit!`)
+    try {
+        const updateStreamDream = await db.StreamDream.findById(req.params.id);
+        const context = {
+            streamDream: updateStreamDream
+        }
+        return res.render('edit.ejs', context)
+
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
 })
 
 
 // Destroy - Delete
 router.delete('/', async (req, res, next) => {
-    res.send(`Welcome to StreamDream Hitting delete!`)
+    try {
+        const deleteStreamDream = await db.StreamDream.findbyIdAndDelete(req.params.id);
+        return res.redirect('/streamDream')
+
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
 })
 
 

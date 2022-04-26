@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs') %> 
+    <%- include('partials/nav.ejs') %> 
+<body>
+    <section>
+        <div>
+            <h2 class="title"> StreamDream Selection Page</h2>
+        </div>
+    </section>
+
+    <main class="container">
+        <div>
+            <div>
+                <% for (let i = 0; i < streamDream.length; i++) { %> 
+                    <% const stream = streamDream[i] %>
+                    <div>
+                        <img src=<%= stream.img %>  class="streamDream.img" alt="Stream Dream image" />
+                        <h3>
+                            <a href="/streamDream/<%= i %> ">
+                                <%= stream.artist %> 
+                            </a>
+                        </h3>
+                    </div>
+
+                <% } %> 
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
