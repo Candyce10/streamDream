@@ -2,13 +2,13 @@
 
 # User Stories
     * Users will access Stream Dream through its Index Route.
-    ![Index Route Page] (https://thumbs2.imgbox.com/12/87/iwNGRhDP_t.png)
+    
     * Users will see the Stream Dream Logo and slogan as the page header, as well as some nav links.
         - These nav links will allow users to access the page to create a new video post, and potentially reach additional stretch features.
     * The body of the index page will be composed of video post snippet links.
         - Each snippet will contain a thumbnail picture of each video, the video title and Artist name, and a snippet of pertanent video info.
     * Users will then be able to click within the video snippet section and be linked to the video show page 
-    ![Video Show Route Page] (https://thumbs2.imgbox.com/42/9f/SKAJhhzI_t.png)
+    <a href="https://imgbox.com/SKAJhhzI" target="_blank"><img src="https://thumbs2.imgbox.com/42/9f/SKAJhhzI_t.png" alt="imgbox"/></a>
     * Users will be able to view the selected video that is embeded in the page as well as use the built in video controls.
     * To the right of the embeded video users will find a scrollable comment section
     * Underneath the embeded video and comment section users will see an informational block.
@@ -25,10 +25,10 @@
 
 # Stretch
     * Search bar on Index Route Page
-    ![Index Route Page w/ search bar](https://thumbs2.imgbox.com/73/2a/VHcK6Ox9_t.png)
+    <a href="https://imgbox.com/VHcK6Ox9" target="_blank"><img src="https://thumbs2.imgbox.com/73/2a/VHcK6Ox9_t.png" alt="imgbox"/></a>
 	* Multiple Artists / Artist Pages
-    ![Show Route Page for Videos w/o Artist Info](https://thumbs2.imgbox.com/b1/7c/WMXAuPLR_t.png)
-    ![Show Route Page for Artists](https://thumbs2.imgbox.com/96/35/xuACiy2F_t.png)
+    <a href="https://imgbox.com/WMXAuPLR" target="_blank"><img src="https://thumbs2.imgbox.com/b1/7c/WMXAuPLR_t.png" alt="imgbox"/></a>
+    <a href="https://imgbox.com/xuACiy2F" target="_blank"><img src="https://thumbs2.imgbox.com/96/35/xuACiy2F_t.png" alt="imgbox"/></a>
 	* Likes and Comments on Videos
 	* Created Lyrics Page for each Video
 	* Additional Standard Pages
@@ -48,11 +48,17 @@
 #
 
 #
+![Screenshot (438)](https://user-images.githubusercontent.com/98247684/165391004-90eaecad-3436-44e4-9183-e4e874916f2d.png)
+
+#
+![Screenshot (437) (2)](https://user-images.githubusercontent.com/98247684/165390956-003a8458-e67b-4b86-89da-4a821daa1e2d.png)
 
 #
 
-#
 
-#
+#![Screenshot (439)](https://user-images.githubusercontent.com/98247684/165391050-56a466fd-83ec-4ac3-8504-d7bf23a0a02f.png)
 
-#
+
+#![Screenshot (440)](https://user-images.githubusercontent.com/98247684/165391088-a30189f6-af33-4300-940f-a517159dd498.png)
+![Screenshot (441)](https://user-images.githubusercontent.com/98247684/165391131-6c4ea58e-40ea-4e9c-b724-52bd8f2045ab.png)
+
