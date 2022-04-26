@@ -1,6 +1,5 @@
 const express = require('express');
 const methodOverride = require('method-override');
-const { StreamDream } = require('./controllers');
 const controllers = require('./controllers');
 
 const app = express();
@@ -9,9 +8,6 @@ require('./config/db.connection');
 
 const PORT = 4000;
 
-//
-// const streamDream = require('./models/StreamDream')
-//
 
 app.set('view engine', 'ejs');
 
@@ -29,9 +25,5 @@ app.get('/', (req, res) => {
     res.send('Welcome to StreamDream!!!')
 })
 
-// app.get('/streamDream', (req, res) => {
-//     const context = {streamDream: streamDream}
-//     res.render('index.ejs', context)
-// })
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))

@@ -9,7 +9,7 @@ const db = require('../models')
 router.get('/', async (req, res, next) => {
     try {
         const streamDreams = await db.StreamDream.find({});
-        const context = { products }
+        const context = { streamDreams }
         return res.render('index.ejs', context)
     } catch (error) {
         console.log(error);
