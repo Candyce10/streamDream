@@ -3,7 +3,8 @@
 # User Stories
     * Users will access Stream Dream through its Index Route.
     
-    ![Screenshot (438)](https://user-images.githubusercontent.com/98247684/165393136-94affd1b-b08f-4073-814f-0e9c25c51fb6.png)
+![Screenshot (438)](https://user-images.githubusercontent.com/98247684/165393468-3bdc1909-c86a-4475-87d2-9d75e7bbe780.png)
+
 
     
     
