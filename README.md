@@ -2,13 +2,13 @@
 
 # User Stories
     * Users will access Stream Dream through its Index Route.
-    ![Index Route Page] (https://imgbox.com/iwNGRhDP)
+    ![Index Route Page] (https://thumbs2.imgbox.com/12/87/iwNGRhDP_t.png)
     * Users will see the Stream Dream Logo and slogan as the page header, as well as some nav links.
         - These nav links will allow users to access the page to create a new video post, and potentially reach additional stretch features.
     * The body of the index page will be composed of video post snippet links.
         - Each snippet will contain a thumbnail picture of each video, the video title and Artist name, and a snippet of pertanent video info.
     * Users will then be able to click within the video snippet section and be linked to the video show page 
-    ![Video Show Route Page] (https://imgbox.com/SKAJhhzI)
+    ![Video Show Route Page] (https://thumbs2.imgbox.com/42/9f/SKAJhhzI_t.png)
     * Users will be able to view the selected video that is embeded in the page as well as use the built in video controls.
     * To the right of the embeded video users will find a scrollable comment section
     * Underneath the embeded video and comment section users will see an informational block.
@@ -24,7 +24,11 @@
 	* Deploy app with Heroku
 
 # Stretch
+    * Search bar on Index Route Page
+    ![Index Route Page w/ search bar](https://thumbs2.imgbox.com/73/2a/VHcK6Ox9_t.png)
 	* Multiple Artists / Artist Pages
+    ![Show Route Page for Videos w/o Artist Info](https://thumbs2.imgbox.com/b1/7c/WMXAuPLR_t.png)
+    ![Show Route Page for Artists](https://thumbs2.imgbox.com/96/35/xuACiy2F_t.png)
 	* Likes and Comments on Videos
 	* Created Lyrics Page for each Video
 	* Additional Standard Pages
