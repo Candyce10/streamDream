@@ -2,7 +2,11 @@
 
 # User Stories
     * Users will access Stream Dream through its Index Route.
-    ![Screenshot (438)](https://user-images.githubusercontent.com/98247684/165391004-90eaecad-3436-44e4-9183-e4e874916f2d.png)
+    
+    ![Screenshot (438)](https://user-images.githubusercontent.com/98247684/165393136-94affd1b-b08f-4073-814f-0e9c25c51fb6.png)
+
+    
+    
     * Users will see the Stream Dream Logo and slogan as the page header, as well as some nav links.
         - These nav links will allow users to access the page to create a new video post, and potentially reach additional stretch features.
     * The body of the index page will be composed of video post snippet links.
