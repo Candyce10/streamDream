@@ -8,6 +8,7 @@ require('./config/db.connection');
 
 const PORT = 4000;
 
+
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'))
@@ -23,5 +24,6 @@ app.use('/streamDream', controllers.streamDream)
 app.get('/', (req, res) => {
     res.send('Welcome to StreamDream!!!')
 })
+
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))

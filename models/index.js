@@ -1,3 +1,3 @@
-// models.export = {
-//     StreamDream: require('./StreamDream')
-// }
+module.exports = {
+    StreamDream: require('./StreamDream')
+}
