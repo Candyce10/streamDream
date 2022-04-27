@@ -46,13 +46,8 @@ router.get('/:id/', async (req, res, next) => {
         const context = {
             oneStreamDream: foundStreamDream
         }
-<<<<<<< HEAD
-        console.log('hitting the show route')
-        return res.render('show.ejs')
-=======
         console.log('show route reached')
         return res.render('show.ejs' , context)
->>>>>>> 1957955d923d6c20b7fd0364cc02031e0bf21842
 
     } catch (error) {
         console.log(error);
