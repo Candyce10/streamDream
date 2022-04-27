@@ -56,9 +56,9 @@
 			- Consider Design Principles
 			- Color/Typography Psychology in Branding
 			
-![Screenshot (449)](https://user-images.githubusercontent.com/98247684/165414835-dabf74ee-d806-439a-a389-cfa65acac752.png)
-
 ![Screenshot (451)](https://user-images.githubusercontent.com/98247684/165416670-2dbcb93e-0468-4929-9019-e0017fb88e06.png)
+			
+![Screenshot (449)](https://user-images.githubusercontent.com/98247684/165414835-dabf74ee-d806-439a-a389-cfa65acac752.png)
 
 ![Screenshot (455)](https://user-images.githubusercontent.com/98247684/165504885-e5a4b523-c7c1-4ed2-a39b-f2db108e319b.png)
 
