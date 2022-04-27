@@ -81,7 +81,7 @@ const streamDreamSchema = new mongoose.Schema({
     },
     headerImg: {
         type: String,
-        required: [true, 'header image cannot be empty']
+        // required: [true, 'header image cannot be empty']
     },
     bio:{
         type: String,
