@@ -72,14 +72,3 @@
 	
 	* Kaye Bryant  - Full Stack Software Engineer - SCRUM Manager
 
-#
-
-
-#
-
-
-#
-
-
-#
-
