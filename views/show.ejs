@@ -5,20 +5,17 @@
 
 <body>
  
-    <div class = "video link"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+   <h1>Artist <%= oneStreamDream.artist %></h1>
+   <div>
+      <h3><iframe width='560' height='315' src= <%= oneStreamDream.videos.link %> title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></h3>
+      <h3><img src= <%= oneStreamDream.img %>/></h3>
+      <h3><%= oneStreamDream.artist %><%= oneStreamDream.videos.song %> </h3>
+      <h3></h3>
+   </div>
 
-<%= %> video song
-<%= %> video link
-<%= %> artist
-<%= %> video releaseDate
-<%= %> video album
-<%= %> img
-
+   
+    
+    
 
 
 </body>

@@ -40,13 +40,14 @@ router.post('/', async (req, res, next) => {
 
 
 // Show
-router.get('/:streamDreamId', async (req, res, next) => {
+router.get('/:id/', async (req, res, next) => {
     try {
         const foundStreamDream = await db.StreamDream.findById(req.params.id)
         const context = {
             oneStreamDream: foundStreamDream
         }
-        return res.render('show.ejs')
+        console.log('show route reached')
+        return res.render('show.ejs' , context)
 
     } catch (error) {
         console.log(error);
