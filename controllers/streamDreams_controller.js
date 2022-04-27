@@ -25,20 +25,6 @@ router.get('/new', async (req, res, next) => {
 })
 
 
-// Create
-router.post('/', async (req, res, next) => {
-    try {
-        const createStreamDream = await db.StreamDream.create(req.body);
-        res.redirect('/streamDream')
-
-    } catch (error) {
-        console.log(error);
-        req.error = error;
-        return next();
-    }
-})
-
-
 // Show
 router.get('/:id/', async (req, res, next) => {
     try {
@@ -48,6 +34,20 @@ router.get('/:id/', async (req, res, next) => {
         }
         console.log('show route reached')
         return res.render('show.ejs' , context)
+        
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+})
+
+// Create
+router.post('/', async (req, res, next) => {
+    try {
+        // console.log(req.body)
+        const createdStreamDream = await db.StreamDream.create(req.body);
+        res.redirect('/streamDream')
 
     } catch (error) {
         console.log(error);
