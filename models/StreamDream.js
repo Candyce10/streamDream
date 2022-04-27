@@ -73,36 +73,36 @@ const mongoose = require('mongoose');
 const streamDreamSchema = new mongoose.Schema({
     artist: {
         type: String,
-        // required: [true, 'artist cannot be empty']
+        required: [true, 'artist cannot be empty']
     },
     img: {
         type: String,
-        // required: [true, 'image cannot be empty']
+        required: [true, 'image cannot be empty']
     },
     headerImg: {
         type: String,
-        // required: [true, 'header image cannot be empty']
+        required: [true, 'header image cannot be empty']
     },
     bio:{
         type: String,
-        // required: [true, 'bio cannot be empty']
+        required: [true, 'bio cannot be empty']
     },
     videos:[{
         song:{
             type: String,
-            // required: [true, 'song cannot be empty']
+            required: [true, 'song cannot be empty']
         },
         releaseDate:{
             type: Number,
-            // required: [true, 'date cannot be empty']
+            required: [true, 'date cannot be empty']
         },
         link:{
             type: String,
-            // required: [true, 'link cannot be empty']
+            required: [true, 'link cannot be empty']
         },
         album:{
             type: String,
-            // required: [true, 'album cannot be empty']
+            required: [true, 'album cannot be empty']
         }
     }]
 })
