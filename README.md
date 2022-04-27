@@ -60,6 +60,8 @@
 
 ![Screenshot (451)](https://user-images.githubusercontent.com/98247684/165416670-2dbcb93e-0468-4929-9019-e0017fb88e06.png)
 
+![Screenshot (455)](https://user-images.githubusercontent.com/98247684/165504885-e5a4b523-c7c1-4ed2-a39b-f2db108e319b.png)
+
 ![Screenshot (453) (1)](https://user-images.githubusercontent.com/98247684/165502315-7acbca8e-e7b7-40f1-aef0-66358247d5b0.png)
 
 ![Stream Dream Logo Transparent PNG](https://user-images.githubusercontent.com/98247684/165502380-500cd3b2-a238-45e7-8ad1-db79cd302a82.png)
@@ -80,3 +82,15 @@
 	
 	* Kaye Bryant  - Full Stack Software Engineer - SCRUM Manager
 
+# Additional Resources Utilized
+	* For Image Hosting and editing
+		- gravit.io
+		- canva.com
+		- iloveimg.com
+		- imgbox.com
+	* For Branding Concepts
+		- https://www.tailwindapp.com/blog/color-psychology-in-marketing
+		- https://unsplash.com/photos/BEeu6Oi5Wug
+	* For Troubleshooting Code	
+		- https://www.codegrepper.com/code-examples/javascript/frameworks/express/javascript+embed+youtube+video
+		- https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
