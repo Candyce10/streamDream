@@ -87,7 +87,7 @@ const streamDreamSchema = new mongoose.Schema({
         type: String,
         required: [true, 'bio cannot be empty']
     },
-    videos:[{
+   
         song:{
             type: String,
             required: [true, 'song cannot be empty']
@@ -104,7 +104,7 @@ const streamDreamSchema = new mongoose.Schema({
             type: String,
             required: [true, 'album cannot be empty']
         }
-    }]
+ 
 })
 
 const StreamDream = mongoose.model("StreamDream", streamDreamSchema);
