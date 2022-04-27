@@ -51,10 +51,15 @@
 		- Clear consistent color scheme and typography
 			- Consider Design Principles
 			- Color/Typography Psychology in Branding
+			
+![Screenshot (449)](https://user-images.githubusercontent.com/98247684/165414835-dabf74ee-d806-439a-a389-cfa65acac752.png)
 
-# 
+![Screenshot (444)](https://user-images.githubusercontent.com/98247684/165414852-4a67afd4-bf5a-49b6-910c-3c5d4e9a2788.png)
 
-#
+# Entity Relationship Diagram
+
+![Screenshot (445)](https://user-images.githubusercontent.com/98247684/165414863-4e6465e5-02e7-4a5b-9a05-43b17190df2a.png)
+
 
 #
 
