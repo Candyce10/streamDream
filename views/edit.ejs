@@ -4,19 +4,19 @@
 <body>
     <form method="POST" action="/streamdream/<%= req.params.id %>/?_method=PUT">
         <label for="artist">Artist:</label>
-        <input type="text" name="artist" id="artist" value="<%= req.params.artist %>" />
+        <input type="text" name="artist" id="artist" />
    
         <label for="song">Song Title: </label>
-        <input type="text" name="song" id="song" value="<%= req.params.song %>"/>     
+        <input type="text" name="song" id="song"/>     
         
         <label for="releaseDate">Release Date: </label>
-        <input type="number" name="releaseDate" id="releaseDate" value="<%= req.params.releaseDate %>"/>
+        <input type="number" name="releaseDate" id="releaseDate"/>
 
         <label for="link">Link: </label>
-        <input type="text" name="link" id="link" value="<%= req.params.link %>" />
+        <input type="text" name="link" id="link" />
    
         <label for="album">Album: </label>
-        <input type="text" name="album" id="album" value="<%= req.params.album %>"/> 
+        <input type="text" name="album" id="album" /> 
 
         <input type="submit" value="Edit Video">
 
