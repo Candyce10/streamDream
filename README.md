@@ -32,7 +32,7 @@
 	* Connect app to Mongo DB
 	* Deploy app with Heroku
 
-# Stretch
+# Stretch Goals
     * Search bar on Index Route Page
 
 ![Screenshot (437) (2)](https://user-images.githubusercontent.com/98247684/165393880-1bf65b2d-c8c6-4fa8-8679-47a5dd18167a.png)
@@ -64,9 +64,13 @@
 
 ![Screenshot (445)](https://user-images.githubusercontent.com/98247684/165414863-4e6465e5-02e7-4a5b-9a05-43b17190df2a.png)
 
+# Stream Dream Dream Team
 
-#
-
+	* Jordan Majane - Full Stack Software Engineer - Lead Backend Developer
+	
+	* Candyce Mathews - Full Stack Software Engineer - Lead Frontend Developer
+	
+	* Kaye Bryant  - Full Stack Software Engineer - SCRUM Manager
 
 #
 
