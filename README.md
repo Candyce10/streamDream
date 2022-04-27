@@ -7,6 +7,10 @@
     
     * Users will see the Stream Dream Logo and slogan as the page header, as well as some nav links.
         - These nav links will allow users to access the page to create a new video post, and potentially reach additional stretch features.
+	
+![Screenshot (450)](https://user-images.githubusercontent.com/98247684/165416646-1b99bd3c-29a2-48b0-b2fb-02a1da680f2d.png)
+
+	
     * The body of the index page will be composed of video post snippet links.
         - Each snippet will contain a thumbnail picture of each video, the video title and Artist name, and a snippet of pertanent video info.
     * Users will then be able to click within the video snippet section and be linked to the video show page 
@@ -54,7 +58,7 @@
 			
 ![Screenshot (449)](https://user-images.githubusercontent.com/98247684/165414835-dabf74ee-d806-439a-a389-cfa65acac752.png)
 
-![Screenshot (444)](https://user-images.githubusercontent.com/98247684/165414852-4a67afd4-bf5a-49b6-910c-3c5d4e9a2788.png)
+![Screenshot (451)](https://user-images.githubusercontent.com/98247684/165416670-2dbcb93e-0468-4929-9019-e0017fb88e06.png)
 
 # Entity Relationship Diagram
 
