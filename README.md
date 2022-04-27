@@ -60,6 +60,11 @@
 
 ![Screenshot (451)](https://user-images.githubusercontent.com/98247684/165416670-2dbcb93e-0468-4929-9019-e0017fb88e06.png)
 
+![Screenshot (453) (1)](https://user-images.githubusercontent.com/98247684/165502315-7acbca8e-e7b7-40f1-aef0-66358247d5b0.png)
+
+![Stream Dream Logo Transparent PNG](https://user-images.githubusercontent.com/98247684/165502380-500cd3b2-a238-45e7-8ad1-db79cd302a82.png)
+
+
 # Entity Relationship Diagram
 
 ![Screenshot (445)](https://user-images.githubusercontent.com/98247684/165414863-4e6465e5-02e7-4a5b-9a05-43b17190df2a.png)
