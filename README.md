@@ -1,4 +1,14 @@
 # Stream Dream
+    * Vision: StreamDream is an innovative application that intends to lead and dominate the user video posting and streaming industry.
+    * Mission: To dependably provide users the means to add their favorite videos as well as add their favorite video content creators, and access them through a creative and relaxing GUI.
+
+# Stream Dream Dream Team
+
+	* Jordan Majane - Full Stack Software Engineer - Lead Backend Developer
+	
+	* Candyce Mathews - Full Stack Software Engineer - Lead Frontend Developer
+	
+	* Kaye Bryant  - Full Stack Software Engineer - SCRUM Manager
 
 # User Stories
     * Users will access Stream Dream through its Index Route.
@@ -68,19 +78,9 @@
 
 ![Screenshot (454)](https://user-images.githubusercontent.com/98247684/165503314-8e25291d-a83a-4007-ba47-47cdff9fb7aa.png)
 
-
-
 # Entity Relationship Diagram
 
 ![Screenshot (445)](https://user-images.githubusercontent.com/98247684/165414863-4e6465e5-02e7-4a5b-9a05-43b17190df2a.png)
-
-# Stream Dream Dream Team
-
-	* Jordan Majane - Full Stack Software Engineer - Lead Backend Developer
-	
-	* Candyce Mathews - Full Stack Software Engineer - Lead Frontend Developer
-	
-	* Kaye Bryant  - Full Stack Software Engineer - SCRUM Manager
 
 # Additional Resources Utilized
 	* For Image Hosting and editing
@@ -91,6 +91,8 @@
 	* For Branding Concepts
 		- https://www.tailwindapp.com/blog/color-psychology-in-marketing
 		- https://unsplash.com/photos/BEeu6Oi5Wug
+        - https://www.canva.com/learn/font-psychology/
+        - https://designmodo.com/font-psychology/
 	* For Troubleshooting Code	
 		- https://www.codegrepper.com/code-examples/javascript/frameworks/express/javascript+embed+youtube+video
 		- https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
