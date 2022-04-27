@@ -87,24 +87,22 @@ const streamDreamSchema = new mongoose.Schema({
         type: String,
         required: [true, 'bio cannot be empty']
     },
-    videos:[{
-        song:{
-            type: String,
-            required: [true, 'song cannot be empty']
-        },
-        releaseDate:{
-            type: Number,
-            required: [true, 'date cannot be empty']
-        },
-        link:{
-            type: String,
-            required: [true, 'link cannot be empty']
-        },
-        album:{
-            type: String,
-            required: [true, 'album cannot be empty']
-        }
-    }]
+    song:{
+        type: String,
+        required: [true, 'song cannot be empty']
+    },
+    releaseDate:{
+        type: Number,
+        required: [true, 'date cannot be empty']
+    },
+    link:{
+        type: String,
+        required: [true, 'link cannot be empty']
+    },
+    album:{
+        type: String,
+        required: [true, 'album cannot be empty']
+    }
 })
 
 const StreamDream = mongoose.model("StreamDream", streamDreamSchema);
