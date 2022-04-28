@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include( 'partials/head.ejs' ) %>
+    <%- include('partials/head.ejs') %> 
+    <%- include('partials/nav.ejs') %> 
 <body>
+    
+    <h1>Edit Video Upload </h1>
     <form method="POST" action="/streamdream/:streamDreamId/?_method=PUT">
         <div>
             <label for="artist">Artist Name:</label>
-            <input id="artist" name="artist" type="text"/>
+            <input id="artist" name="artist" type="text" placeholder="<%= streamDream.artist %>"/>
         </div>
         <div>
             <label for="img">Artist Photo:</label>
             <input id="img" name="img" type="text"/>
         </div>
         <div>
-            <label for="headerImage">Header Image:</label>
-            <input id="headerImage" name="headerImage" type="text"/>
+            <label for="headerImg">Header Image:</label>
+            <input id="headerImg" name="headerImg" type="text"/>
         </div>
         <div>
             <label for="bio">Bio:</label>
             <input id="bio" name="bio" type="text"/>
         </div>
-        <div>
-            <label for="videos">Video Upload</label>
         <div>
             <label for="song">Song Name:</label>
             <input id="song" name="song" type="text"/>
@@ -30,8 +31,8 @@
             <input id="releaseDate" name="releaseDate" type="number"/>
         </div>
         <div>
-            <label for="videoLink">Video Link:</label>
-            <input id="videoLink" name="videoLink" type="text"/>
+            <label for="link">Video Link:</label>
+            <input id="link" name="link" type="text"/>
         </div>
         <div>
             <label for="album">Album Name:</label>

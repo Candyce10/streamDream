@@ -74,6 +74,7 @@ router.put('/:streamDreamId', async (req, res, next) => {
 router.get('/:streamDreamId/edit', async (req, res, next) => {
     try {
         const updateStreamDream = await db.StreamDream.findById(req.params.id);
+        let artistId = req.params.id
         const context = {
             streamDream: updateStreamDream
         }
