@@ -30,6 +30,27 @@
          <p><%= oneStreamDream.album %></p>
          <p><%= oneStreamDream.releaseDate %></p> 
       </h3></div>
+      <section>
+         <h2>Music Video Review</h2>
+         <div>
+            <h3>Add a Comment</h3>
+            <form method="POST" action="/comments">
+               <input name="rating" type="number"/>
+               <input name="content" type="text"/>
+               <input name="stream" type="text" value="<%=oneStreamDream._id %>"/>
+               <input type="submit" value="Post your Comment" />
+            </form>
+         </div>
+         <% for (let i = 0; i < comments.length; i++) { %> 
+            <div>
+               <h3>Rating: <%= comments[i].rating %> </h3>
+               <p><%= comments[i].content %> </p>
+               <form action="/comments/<%=comments[i]._id%>?_method=DELETE" method="POST">
+               <input type="submit" value="Delete Comment" />
+            </form>
+         </div>
+         <% } %> 
+      </section>
    </div>
    
   
