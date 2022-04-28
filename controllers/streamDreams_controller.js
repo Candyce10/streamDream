@@ -29,8 +29,10 @@ router.get('/new', async (req, res, next) => {
 router.get('/:id/', async (req, res, next) => {
     try {
         const foundStreamDream = await db.StreamDream.findById(req.params.id)
+        const allComments = await db.Comment.find({comment: req.params.id})
         const context = {
-            oneStreamDream: foundStreamDream
+            oneStreamDream: foundStreamDream,
+            comments: allComments
         }
         return res.render('show.ejs' , context)
         
@@ -92,6 +94,7 @@ router.get('/:streamDreamId/edit', async (req, res, next) => {
 router.delete('/', async (req, res, next) => {
     try {
         const deleteStreamDream = await db.StreamDream.findbyIdAndDelete(req.params.id);
+        const deletedComments = await db.Comment.deleteMany({streamDream: req.params.id})
         return res.redirect('/streamDream')
 
     } catch (error) {
