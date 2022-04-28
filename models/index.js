@@ -1,3 +1,4 @@
 module.exports = {
-    StreamDream: require('./StreamDream')
+    StreamDream: require('./StreamDream'),
+    Comment: require('./Comment')
 }
