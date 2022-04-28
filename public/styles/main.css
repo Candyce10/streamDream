@@ -1,19 +1,67 @@
 
 
-a{
-    text-decoration: none;
+body{
+    background-color: #5E175B;
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    background: white;
+    }
+
+.navbar a{
+    text-decoration: none;
+    color: #5E175B;
+    padding: 0.9%;
+    transition: color 0.5s;
+}
+
+.navRight {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    justify-content: space-around;
+}
+
+.navRight a {
+    text-decoration: none;
+    color: #5E175B;
+    padding: 0.9%;
+    transition: color 0.5s;
+}
+
+.navRight a:hover{
+    color: whitesmoke;
+    background-color: #5E175B;
+    padding: 3%;
+}
+
+.navbar a:hover{
+    color: whitesmoke;
+    background-color: #5E175B;
+    
+}
+
+
+
 
 .header{
     width: 100%;
+    margin-top: 10%;
 }
 
 .headerImg{
     width: 100%;
-}
-
-.artistName{
-    text-align: center;
 }
 
 .artistProfile{
@@ -24,6 +72,7 @@ a{
 
 .profileImageDiv{
     width: 33%;
+    height: 33%
     
 }
 
@@ -40,22 +89,52 @@ a{
     padding: 0px 0px 0px 5%;
 }
 
-.showPageVideo{
-    width: 65%;
-    height: 45%;
+.container{
+    
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 1%;
+    
 }
 
-.streamVideo{
-    padding-top: 56.25%;
-    height: 0px;
-    position: relative;
+.videoSection{
+    width: 100%;
+    
+}
+
+.videoBlock{
+    background-color: rgba(248, 243, 243, 0.918);
+    width: 75%;
+    display:flex;
+    border-radius: 15px;
+    float: right;
+    box-shadow: 5px 5px 15px 5px #000000;
+    margin: 1%;
 }
 
 .videoContainer{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    padding: 1%; 
+    
 }
 
+.streamDreamImg{
+    width: 120px;
+    height: 120px;
+    border-radius: 15%;
+    margin: 10px;
+    
+}
+
+.videoDescription{
+    color: #E578b2;
+    margin-top: 7%;
+}
+
+.videoDescription a{
+    text-decoration: none;
+    color: #A36CB2    ;
+
+}
