@@ -34,9 +34,8 @@ router.get('/new', async (req, res, next) => {
 // Create
 router.post('/', async (req, res, next) => {
     try {
-        const newCommentData = req.body
-        const newComment = await db.Comment.create(newCommentData)
-        res.redirect(`/streamDream/${newComment.streamDream}`)
+        const newComment = await db.Comment.create(req.body)
+        res.redirect(`/streamDream/${newComment.stream}`)
 
     } catch (error){
         console.log(error);
@@ -63,13 +62,13 @@ router.get('/:commentId', async (req, res, next) => {
 
 // Update
 router.put('/:commentId', async (req, res, next) => {
-    res.send('hitting comment update' +req.params.commmentId)
+    res.send('hitting comment update' +req.params.commentId)
 })
 
 
 // Edit
 router.get('/:commentId/edit', async (req, res, next) => {
-    res.send('hitting comment edit' +req.params.commmentId)
+    res.send('hitting comment edit' +req.params.commentId)
 })
 
 
@@ -77,8 +76,8 @@ router.get('/:commentId/edit', async (req, res, next) => {
 router.delete('/:commentId', async (req, res, next) => {
     try {
         const deleteComment = await db.Comment.findByIdAndDelete(req.params.commentId)
-        res.redirect('/streamDream/'+deleteComment.streamDream)
-
+        res.redirect('/streamDream/'+deleteComment.stream)
+        
     } catch (error) {
         req.error = error;
         return next();
