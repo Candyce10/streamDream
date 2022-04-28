@@ -32,7 +32,6 @@ router.get('/:id/', async (req, res, next) => {
         const context = {
             oneStreamDream: foundStreamDream
         }
-        console.log('show route reached')
         return res.render('show.ejs' , context)
         
     } catch (error) {
