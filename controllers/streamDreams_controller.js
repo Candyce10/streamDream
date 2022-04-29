@@ -29,7 +29,7 @@ router.get('/new', async (req, res, next) => {
 router.get('/:id/', async (req, res, next) => {
     try {
         const foundStreamDream = await db.StreamDream.findById(req.params.id)
-        const allComments = await db.Comment.find({comment: req.params.id})
+        const allComments = await db.Comment.find({stream: req.params.id})
         const context = {
             oneStreamDream: foundStreamDream,
             comments: allComments
