@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include( 'partials/head.ejs' ) %>
+    <%- include('partials/head.ejs') %> 
+    <%- include('partials/nav.ejs') %> 
 <body>
     <form method="POST" action="/streamdream/<%= streamDream._id %>?_method=PUT">
-        <label for="artist">Artist:</label>
-        <input type="text" name="artist" id="artist" />
-   
-        <label for="song">Song Title: </label>
-        <input type="text" name="song" id="song"/>     
-        
-        <label for="releaseDate">Release Date: </label>
-        <input type="number" name="releaseDate" id="releaseDate"/>
-
-        <label for="link">Link: </label>
-        <input type="text" name="link" id="link" />
-   
-        <label for="album">Album: </label>
-        <input type="text" name="album" id="album" /> 
-
-        <input type="submit" value="Edit Video">
-
+        <div>
+            <label for="artist">Artist Name:</label>
+            <input id="artist" name="artist" type="text" placeholder="<%= streamDream.artist %>"/>
+        </div>
+        <div>
+            <label for="img">Artist Photo:</label>
+            <input id="img" name="img" type="text" placeholder="<%= streamDream.img %>"/>
+        </div>
+        <div>
+            <label for="headerImg">Header Image:</label>
+            <input id="headerImg" name="headerImg" type="text" placeholder="<%= streamDream.headerImg %>"/>
+        </div>
+        <div>
+            <label for="bio">Bio:</label>
+            <input id="bio" name="bio" type="text" placeholder="<%= streamDream.bio %>"/>
+        </div>
+        <div>
+            <label for="song">Song Name:</label>
+            <input id="song" name="song" type="text" placeholder="<%= streamDream.song %>"/>
+        </div>
+        <div>
+            <label for="releaseDate">Release Date:</label>
+            <input id="releaseDate" name="releaseDate" type="number" placeholder="<%= streamDream.releaseDate %>" />
+        </div>
+        <div>
+            <label for="link">Video Link:</label>
+            <input id="link" name="link" type="text" placeholder="<%= streamDream.link %>"/>
+        </div>
+        <div>
+            <label for="album">Album Name:</label>
+            <input id="album" name="album" type="text" placeholder="<%= streamDream.album %>"/>
+        </div>
+        <input type="submit" value="Upload Video">
     </form>
 </body>
 </html>

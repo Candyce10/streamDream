@@ -2,7 +2,7 @@
     # GET http://localhost:4000/
 
 # INDEX ROUTE
-    # GET http://localhost:4000/streamdream
+    GET http://localhost:4000/streamdream
 
 # SHOW ROUTE
     # GET http://localhost:4000/streamdream/:streamDreamId
@@ -14,7 +14,7 @@
     # GET http://localhost:4000/streamdream/New
 
 # EDIT ROUTE
-GET http://localhost:4000/streamdream/:streamDreamId/edit
+# GET http://localhost:4000/streamdream/:streamDreamId/edit
     # GET http://localhost:4000/streamdream/0/edit
     # GET http://localhost:4000/streamdream/1/edit
     # GET http://localhost:4000/streamdream/2/edit
