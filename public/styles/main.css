@@ -3,7 +3,7 @@
 body{
     background-color: #5E175B;
 }
-
+/* nav bar */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -48,21 +48,22 @@ body{
 
 .navbar a:hover{
     color: whitesmoke;
-    background-color: #5E175B;
-    
+    background-color: #5E175B;  
 }
 
 
-
+/* header */
 
 .header{
     width: 100%;
-    margin-top: 10%;
+    margin-top: 3%;
 }
 
 .headerImg{
     width: 100%;
 }
+
+/* show page artist image and profile */
 
 .artistProfile{
     display: flex;
@@ -89,20 +90,18 @@ body{
     padding: 0px 0px 0px 5%;
 }
 
+/* index page video images and info */
 .container{
-    
     display: inline-flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 10px;
     border-radius: 5px;
     margin: 1%;
-    
 }
 
 .videoSection{
     width: 100%;
-    
 }
 
 .videoBlock{
@@ -116,16 +115,14 @@ body{
 }
 
 .videoContainer{
-    padding: 1%; 
-    
+    padding: 1%;  
 }
 
 .streamDreamImg{
     width: 160px;
     height: 130px;
     border-radius: 15%;
-    margin: 10px;
-    
+    margin: 10px;  
 }
 
 .videoDescription{
@@ -135,6 +132,73 @@ body{
 
 .videoDescription a{
     text-decoration: none;
-    color: #A36CB2    ;
-
+    color: #A36CB2;
 }
+
+/* form page  */
+
+  .formBox {
+    max-width: 30%;
+    margin: 0 auto;
+  }
+  
+  
+  #form {
+    background: #F9F9F9;
+    padding: 25px;
+    margin: 20% 0;
+    box-shadow:  0 0.9rem 2rem 0 black;
+    line-height: 30px;
+    color:#5E175B;
+    border-radius: 10px;
+  }
+  
+  #form h3 {
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  
+  
+  #form input[type="text"],
+  #form input[type="number"],
+  #form textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+  }
+  
+  
+ 
+  #form button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background-color: #5E175B;
+    color: #FFF;
+    margin: 0 0 5px;
+    margin-top: 1%;
+    padding: 10px;
+    font-size: 15px;
+    transition: 0.2s;
+    opacity: 0.6;
+  }
+
+  #form button[type="submit"]:hover {
+    opacity: 1;
+    box-shadow:  0 0.9rem 2rem 0 black;
+  }
+  
+  #form button[type="submit"]:active {
+    box-shadow: 0 3px rgb(35, 34, 34);
+    transform: translateY(1.5px);
+  }
+  
+  
+  
+  
+ 
+  
