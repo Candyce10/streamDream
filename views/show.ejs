@@ -19,6 +19,7 @@
       </div>
    </div>
 
+   
    <div class="showPageVideo">
       <div class="streamVideo">
          <iframe width='560' height='315' class="videoContainer" src="<%= oneStreamDream.link %>" title='YouTube video player'
@@ -36,7 +37,7 @@
             <form method="POST" action="/comments">
                <input name="rating" type="number"/>
                <input name="content" type="text"/>
-               <input name="hidden" type="streamDream" value="<%= oneStreamDream.song %> "/>
+               <input name="stream" type="text" value="<%=oneStreamDream._id %>"/>
                <input type="submit" value="Post your Comment" />
             </form>
          </div>
@@ -44,7 +45,7 @@
             <div>
                <h3>Rating: <%= comments[i].rating %> </h3>
                <p><%= comments[i].content %> </p>
-               <form action="/comments/ <%= comments[i]._id %>?_method=DELETE" method="POST">
+               <form action="/comments/<%=comments[i]._id%>?_method=DELETE" method="POST">
                <input type="submit" value="Delete Comment" />
             </form>
          </div>

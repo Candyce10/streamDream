@@ -59,7 +59,7 @@ router.post('/', async (req, res, next) => {
 
 
 // Update
-router.put('/:streamDreamId', async (req, res, next) => {
+router.put('/:id', async (req, res, next) => {
     try {
         const updatedStreamDream = await db.StreamDream.findByIdAndUpdate(req.params.id, req.body);
         return res.redirect('/streamDream')
@@ -73,7 +73,7 @@ router.put('/:streamDreamId', async (req, res, next) => {
 
 
 // Edit
-router.get('/:streamDreamId/edit', async (req, res, next) => {
+router.get('/:id/edit', async (req, res, next) => {
     try {
         const updateStreamDream = await db.StreamDream.findById(req.params.id);
         let artistId = req.params.id
@@ -91,7 +91,7 @@ router.get('/:streamDreamId/edit', async (req, res, next) => {
 
 
 // Destroy - Delete
-router.delete('/', async (req, res, next) => {
+router.delete('/:id', async (req, res, next) => {
     try {
         const deleteStreamDream = await db.StreamDream.findbyIdAndDelete(req.params.id);
         const deletedComments = await db.Comment.deleteMany({streamDream: req.params.id})
