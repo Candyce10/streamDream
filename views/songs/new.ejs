@@ -3,8 +3,11 @@
     <%- include('../partials/head.ejs') %> 
     <%- include('../partials/nav.ejs') %>
 <body>
-    <h1>New Song</h1>
-    <form action="/songs" method="POST">
+    
+    <div class= "formBox">
+    <form action="/songs" class="newSongForm" method="POST" id="form">
+        <h3>Add New Song</h3>
+
         <div>
             <label for="songName">Song Name:</label>
             <input id="songName" name="songName" type="text"/>
@@ -36,5 +39,6 @@
         </div>
         <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
     </form>
+    </div>
 </body>
 </html>
