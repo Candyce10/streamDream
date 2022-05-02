@@ -415,10 +415,22 @@ body{
     transform: translateY(1.5px);
   }
   
-  
-  
   .newSongForm{
-      margin-top: 4vh;
+    margin-top: 4vh;
   }
  
-  
+.showPageVideo{
+    margin-top: 4vh;
+
+}
+
+.streamVideo{
+
+}
+.streamVideoInfo{
+
+}
+
+.comments{
+
+}
