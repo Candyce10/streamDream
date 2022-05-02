@@ -23,7 +23,6 @@ router.get('/:songId', async (req, res, next) => {
             path: 'stream',
             select: 'artist headerImg img'
         });
-        // console.log(foundSong)
         const allComments = await db.Comment.find({song: req.params.songId})
         const context = {
             oneSong: foundSong,
@@ -59,7 +58,7 @@ router.post('/', async (req, res, next) => {
     try {
         
         const newSong = await db.Song.create(req.body)
-        console.log(newSong)
+        // console.log(newSong)
         res.redirect(`/streamDream/${newSong.stream}`)
 
     } catch (error){
