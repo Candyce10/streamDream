@@ -28,7 +28,7 @@
                <form method="POST" action="/comments">
                   <input name="rating" type="number"/>
                   <input name="content" type="text"/>
-                  <input name="stream" type="text" value="<%=oneSong._id %>"/>
+                  <input name="song" type="hidden" value="<%=oneSong._id %>"/>
                   <input type="submit" value="Post your Comment" />
                </form>
             </div>

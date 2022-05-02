@@ -16,8 +16,6 @@ router.get('/', async (req, res, next) => {
 })
 
 
-
-
 // New
 router.get('/new', async (req, res, next) => {
     try {
@@ -36,10 +34,9 @@ router.get('/new', async (req, res, next) => {
 // Create
 router.post('/', async (req, res, next) => {
     try {
-        const newComment = await db.Comment.create(req.body) 
-        console.log(newComment)
-        // console.log(stream)
-        res.redirect(`/songs/${newComment.stream}`)
+        const newComment = await db.Comment.create(req.body)
+        console.log('comment post route', req.body)
+        res.redirect(`/songs/${newComment.song}`)
 
     } catch (error){
         console.log(error);
@@ -80,8 +77,7 @@ router.get('/:commentId/edit', async (req, res, next) => {
 router.delete('/:commentId', async (req, res, next) => {
     try {
         const deleteComment = await db.Comment.findByIdAndDelete(req.params.commentId)
-        console.log(deleteComment)
-        res.redirect('/songs/'+deleteComment.stream)
+        res.redirect('/songs/'+deleteComment.song)
     } catch (error) {
         req.error = error;
         return next();

@@ -23,7 +23,8 @@ router.get('/:songId', async (req, res, next) => {
             path: 'stream',
             select: 'artist headerImg img'
         });
-        const allComments = await db.Comment.find({comment: req.params.id})
+        // console.log(foundSong)
+        const allComments = await db.Comment.find({song: req.params.songId})
         const context = {
             oneSong: foundSong,
             comments: allComments,
