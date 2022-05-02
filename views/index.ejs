@@ -3,11 +3,31 @@
     <%- include('partials/head.ejs') %> 
     <%- include('partials/nav.ejs') %> 
 <body>
+    <div class="exploreBar">
+        <div class="categories">
+            <button class="category">All</button>
+            <button class="category">Music</button>
+            <button class="category">Funny</button>
+            <button class="category">Exercise</button>
+            <button class="category">Dogs</button>
+            <button class="category">Finance</button>
+            <button class="category">Cats</button>
+            <button class="category">NBA</button>
+            <button class="category">Gaming</button>
+            <button class="category">Coding</button>
+            
+        </div>
+    </div>
+    
+    
     <section>
         <div>
-            <h2 class="title"> StreamDream Selection Page</h2>
+            <h2 class="featuredVideos"> Featured Videos</h2>
         </div>
     </section>
+
+
+
 
     <section class="container">
         <% for (let i = 0; i < streamDreams.length; i++) { %> 
@@ -19,8 +39,12 @@
                 <div class ="videoContainer">
                     <a href="/streamDream/<%= streamDreams[i]._id %> "><img class="streamDreamImg" src=<%= stream.img %> alt="Stream Dream image" /></a>
                 </div>
-                <div class="videoDescription">
-                    <h3>Checkout new videos from <a href="/streamDream/<%= streamDreams[i]._id %> "><%= stream.artist %></a></h3>
+                <div class="videoDescriptionBox">
+                    <a href="/streamDream/<%= streamDreams[i]._id %> "><img class="profileIcon" src=<%= stream.img %> alt="Stream Dream image" /></a>
+                    <div class="videoInfo">
+                        <h3><a class="videoTitle" href="/streamDream/<%= streamDreams[i]._id %> "><%= stream.song %></a></h3>
+                        <h3><a class= "videoArtist" href="/streamDream/<%= streamDreams[i]._id %> "><%= stream.artist %></a></h3>
+                    </div>
                 </div>
             </div>
         </div>

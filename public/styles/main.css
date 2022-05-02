@@ -1,9 +1,17 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 body{
     background-color: #5E175B;
+    z-index: 1;
+    top: 1rem;
+    margin: 0;
+    font-family: 'Audiowide', cursive
 }
 
+
+
+/* nav bar */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,39 +25,126 @@ body{
     width: 100%;
     top: 0px;
     background: white;
+    font-size: 1.2rem;
+    align-items: center;
     }
 
 .navbar a{
     text-decoration: none;
     color: #5E175B;
-    padding: 0.9%;
-    transition: color 0.5s;
-}
-
-.navRight {
+    font-family: 'Fascinate Inline', cursive;
+    font-size: 2rem;
     display: flex;
     align-items: center;
-    width: 30%;
-    justify-content: space-between;
+    
 }
 
-.navRight a {
-    text-decoration: none;
-    color: #5E175B;
-    padding: 0, 0.1%, 0, 0;
+.navIcons{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.navRight a:hover{
-    color: whitesmoke;
-    background-color: #5E175B;
-    padding: 3%
+
+
+.logo{
+    height: 50px;
+    margin: 0 .2rem;
 }
 
-.navbar a:hover{
-    color: whitesmoke;
-    background-color: #5E175B;  
+.searchBar{
+    display: flex;
+    flex-grow: 1;
+    margin: 0 2rem 0 4rem;
 }
 
+.searchInput{
+    width: 90%;
+    font-size: 1.2rem;
+    padding: .2em;
+    font-size: inherit;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: inherit;
+    border: 1px solid #5E175B;
+    font-family: 'Audiowide', cursive
+}
+
+.searchButton{
+    display: flex;
+    align-items: center;
+    padding: 0 1.55rem;
+    border: 1px solid #5E175B;
+    background-color: #A36CB2;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    transition: background-color 150ms;
+}
+
+.searchButton:hover{
+    background-color: #654E9D;
+    cursor: pointer;
+}
+
+.searchIcon{
+   width: 35px;
+
+}
+
+.notificationIcon{
+    height: 53px;
+    width: 53px;
+}
+
+.uploadIcon, .profileIcon{
+    height: 40px;
+    width: 40px;
+}
+
+/* explore bar */
+
+.exploreBar{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+    border: 1px solid rgba(248, 243, 243, 0.918);
+    top:3.2rem
+}
+
+
+.category-section{
+    display: flex;
+    overflow: hidden;
+    position: fixed;
+}
+
+.categories{
+    padding: .4rem 2rem;
+    border-top: 1px solid #F9F9F9;
+    border-bottom: 1px solid #F9F9F9;
+}
+
+.category{
+    font-size: 1rem;
+    margin-right: 1rem;
+    border: 1px solid #654E9D;
+    border-radius: 500px;
+    padding: .4rem;
+    transition: background-color 150ms;
+    background-color: #A36CB2;
+    word-wrap: none;
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: 'Audiowide', cursive
+}
+
+
+.category:hover{
+    background-color: #654E9D;
+    color: white
+}
 
 /* header */
 
@@ -61,7 +156,6 @@ body{
 .headerImg{
     width: 100%;
 }
-
 
 /* show page artist image and profile */
 
@@ -87,77 +181,123 @@ body{
     justify-content: center;
     align-items: center;
     width: 60%;
-    padding: 0px 0px 0px 5%;
+    padding: 0, 0, 0, 15%;
 }
-
 
 /* index page video images and info */
 .container{
-    display: inline-flex;
-    justify-content: center;
+    display: flex;
     flex-wrap: wrap;
-    padding: 10px;
     border-radius: 5px;
-    margin: 1%;
+    justify-content: center;
+}
+
+.featuredVideos{
+    padding: 12px;
+    color: #E578B2;
+    margin-top: 6rem;
+    
 }
 
 .videoSection{
-    width: 100%;
+    display:grid;
+    grid-template-columns: repeat(autofill, minmax (250px, 1fr));
+    gap:3rem 1rem;
+    padding: 1rem 0.5rem;
+    justify-content: center;
 }
-
 
 .videoBlock{
     background-color: rgba(248, 243, 243, 0.918);
-    width: 75%;
-    display:flex;
+    width: 15.6rem;
+    height: 13.1rem;
     border-radius: 15px;
-    float: right;
     box-shadow: 5px 5px 15px 5px #000000;
-    margin: 1%;
 }
 
 .videoContainer{
-    padding: 1%;  
+    
+    width: 250px;  
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
 }
 
 .streamDreamImg{
-    width: 160px;
-    height: 130px;
-    border-radius: 15%;
-    margin: 10px;  
+    display: flex;
+    position: relative;
+    width: 14.3rem;
+    height: 8.1rem;
+    margin: 4%; 
 }
 
-.streamDreamImg:hover{
-    box-shadow:  0 0.9rem 2rem 0 #5E175B;
+.videoDescriptionBox {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 .75rem 0 .4rem;
+    
 }
 
-.videoDescription{
-    color: #E578b2;
-    margin-top: 7%;
-}
-
-.videoDescription a{
+.videoDescriptionBox a{
     text-decoration: none;
     color: #A36CB2;
+  
+    
+}
+
+.videoInfo {
+    display:flex;
+    flex-direction: column;
+
+}
+
+.profileIcon{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: .75rem;
+}
+
+.videoTitle{
+    font-size: 1.1rem;
+    font-weight: bold;
+
+}
+
+.videoArtist{
+    margin-bottom: .1rem;
+    font-size:medium;
+    transition: 150ms;
+}
+
+.videoArtist:hover{
+    color: #654E9D;
 }
 
 /* form page  */
 
   .formBox {
-    max-width: 30%;
-    margin: 0 auto;
-    
+   
+   width: 100%;
+   display: flex;
+   justify-content: center;
   }
   
   
   #form {
     background: #F9F9F9;
     padding: 25px;
-    margin: 20% 0;
+    margin: 10% 0;
+    width: 20rem;
     box-shadow:  0 0.9rem 2rem 0 black;
     line-height: 25px;
     color:#5E175B;
     border-radius: 10px;
+    
+   
+
   }
   
   #form h3 {
@@ -193,6 +333,7 @@ body{
     font-size: 15px;
     transition: 0.2s;
     opacity: 0.6;
+    font-family: 'Audiowide', cursive
   }
 
   #form button[type="submit"]:hover {
@@ -210,4 +351,3 @@ body{
   
  
   
-
