@@ -13,9 +13,9 @@
         </label></br>
 
         <label> Video
-            <select name="StreamDream">
+            <select name="stream">
                 <% for (let i = 0; i < streamDreams.length; i++) { %> 
-                    <option value="<%= streamDreams[i]._id %> "><%= streamDreams[i].song %> </option><%= streamDreams[i].artist %> 
+                    <option value="<%= streamDreams[i]._id %> "><%= streamDreams[i].song %> </option>
                 <% } %> 
             </select>
             <input type="submit" name="Post Comment"/>

@@ -77,7 +77,6 @@ router.delete('/:commentId', async (req, res, next) => {
     try {
         const deleteComment = await db.Comment.findByIdAndDelete(req.params.commentId)
         res.redirect('/streamDream/'+deleteComment.stream)
-        
     } catch (error) {
         req.error = error;
         return next();
