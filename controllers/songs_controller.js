@@ -59,9 +59,7 @@ router.post('/', async (req, res, next) => {
     try {
         
         const newSong = await db.Song.create(req.body)
-        console.log(newSong)
         res.redirect(`/streamDream/${newSong.stream}`)
-
     } catch (error){
         console.log(error);
         req.error = error;
@@ -83,7 +81,6 @@ router.put('/:songId', async (req, res, next) => {
 // Edit
 router.get('/:songId/edit', async (req, res, next) => {
     res.send('hitting song edit' + req.params.songId)
-    // res.render('songs/edit.ejs')
 })
 
 
