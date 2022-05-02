@@ -4,14 +4,10 @@
     <%- include('../partials/nav.ejs') %> 
 
 <body>
-   <div class="header">
-      <img class="headerImg" src="<%= oneSong.stream.headerImg %>" alt="header image" />
-   </div>
-   
 
    <div class="showPageVideo">
       <div class="streamVideo">
-         <iframe width='560' height='315' class="videoContainer" src="<%= oneSong.link %>" title='YouTube video player'
+         <iframe width='550' height='350' src="<%= oneSong.link %>" title='YouTube video player'
          frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
       </div>  
       <div class="streamVideoInfo"><h3>
