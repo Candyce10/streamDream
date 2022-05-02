@@ -5,8 +5,8 @@ const db = require('../models')
 // Index
 router.get('/', async (req, res, next) => {
     try {
-        const allComments = await db.Comment.find({})
-        res.send(allComments)
+        const allSongs = await db.Comment.find({})
+        res.send(allSongs)
 
     } catch (error){
         console.log(error);
@@ -14,6 +14,8 @@ router.get('/', async (req, res, next) => {
         return next();
     }
 })
+
+
 
 
 // New

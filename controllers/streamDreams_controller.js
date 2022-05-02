@@ -30,9 +30,12 @@ router.get('/:id/', async (req, res, next) => {
     try {
         const foundStreamDream = await db.StreamDream.findById(req.params.id)
         const allComments = await db.Comment.find({comment: req.params.id})
+        const allSongs = await db.Song.find({stream: req.params.id})
+        console.log("artist show route reached")
         const context = {
             oneStreamDream: foundStreamDream,
-            comments: allComments
+            comments: allComments,
+            songs: allSongs
         }
         return res.render('show.ejs' , context)
         

@@ -23,6 +23,7 @@ app.use(express.urlencoded({ extended: false }))
 // Controllers
 app.use('/streamDream', controllers.streamDreams)
 app.use('/comments', controllers.comments)
+app.use('/songs', controllers.songs)
 
 
 // Home Route

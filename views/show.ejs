@@ -51,6 +51,31 @@
          </div>
          <% } %> 
       </section>
+      <div>
+         <% for (let i = 0; i < songs.length; i++) { %> 
+            <div>
+               <h3>Videos</h3>
+               <p>
+                  <!-- < % const stream = songs[i]._id %> -->
+                  <!-- < % console.log(stream) %> -->
+                  <!-- < % console.log(stream.songName) %> -->
+                  <div class="allVideosSection">
+                        <div class="videoBlock">
+                           <div class ="videoContainer">
+                              <a href="/songs/<%= songs[i]._id %> "><img class="streamDreamImg" src="<%= songs[i].songImg %>" alt="Stream Dream image" /></a>
+                           </div>
+                           <div class="videoDescription">
+                              <h3>
+                                 <%= songs[i].songName %>
+                              </h3>
+                           </div>
+                        </div>
+                  </div>
+               </p>
+            </form>
+         </div>
+         <% } %> 
+      </div>
    </div>
    
   
