@@ -30,6 +30,7 @@ router.get('/:id/', async (req, res, next) => {
     try {
         const foundStreamDream = await db.StreamDream.findById(req.params.id)
         const allComments = await db.Comment.find({stream: req.params.id})
+        const allSongs = await db.Song.find({stream: req.params.id})
         const context = {
             oneStreamDream: foundStreamDream,
             comments: allComments,
@@ -96,6 +97,7 @@ router.delete('/:id', async (req, res, next) => {
     try {
         const deleteStreamDream = await db.StreamDream.findbyIdAndDelete(req.params.id);
         const deletedComments = await db.Comment.deleteMany({streamDream: req.params.id})
+        const deletedSongs = await db.Song.deleteMany({streamDream: req.params.id})
         return res.redirect('/streamDream')
 
     } catch (error) {

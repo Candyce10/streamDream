@@ -5,8 +5,8 @@ const db = require('../models')
 // Index
 router.get('/', async (req, res, next) => {
     try {
-        const allSongs = await db.Comment.find({})
-        res.send(allSongs)
+        const allComments = await db.Comment.find({})
+        res.send(allComments)
 
     } catch (error){
         console.log(error);
@@ -36,8 +36,9 @@ router.get('/new', async (req, res, next) => {
 // Create
 router.post('/', async (req, res, next) => {
     try {
-        const newComment = await db.Comment.create(req.body)
-        res.redirect(`/streamDream/${newComment.stream}`)
+        const newComment = await db.Comment.create(req.body) 
+        console.log(newComment)
+        res.redirect(`/songs/${newComment.stream}`)
 
     } catch (error){
         console.log(error);
@@ -78,7 +79,8 @@ router.get('/:commentId/edit', async (req, res, next) => {
 router.delete('/:commentId', async (req, res, next) => {
     try {
         const deleteComment = await db.Comment.findByIdAndDelete(req.params.commentId)
-        res.redirect('/streamDream/'+deleteComment.stream)
+        console.log(deleteComment)
+        res.redirect('/songs/'+deleteComment.stream)
     } catch (error) {
         req.error = error;
         return next();
