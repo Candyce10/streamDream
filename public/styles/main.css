@@ -2,6 +2,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 
+
+.hovertext:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 140px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    transition: opacity 1s ease-in-out;
+  
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 110%;
+  }
+  
+  .hovertext:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+
 /* scroll bar */
 ::-webkit-scrollbar {
     width: 15px;
@@ -46,12 +72,13 @@ body{
     position: fixed;
     width: 100%;
     min-height: 5vw;
-    min-width: 40vw;
+    min-width: 60vw;
     top: 0vw;
     background: white;
     font-size: 1.2rem;
     align-items: center;
     z-index: 1;
+    max-height: 30vh;
     }
 
 .navbar .navTop {
@@ -65,6 +92,7 @@ body{
     font-size: 1.2rem;
     align-items: center;
     z-index: 1;
+    max-height: 10vh;
     }
 
 .navbar a{
@@ -74,6 +102,8 @@ body{
     font-size: 5vh;
     display: flex;
     align-items: center;
+    max-height: 1vw;
+    min-width: 4vh;
     
 }
 
@@ -87,14 +117,17 @@ body{
 
 
 .logo{
-    max-height: 5vw;
     margin: 0 .2rem;
+    max-height: 5vw;
+    width: 100%;
 }
 
 .searchBar{
     display: flex;
     flex-grow: 1;
     margin: 0 2rem 0 4rem;
+    min-width: 22vh;
+    max-height: 8vh;
 }
 
 .searchInput{
@@ -108,6 +141,7 @@ body{
     border: 1px solid #5E175B;
     font-family: 'Audiowide', cursive;
     outline: none;
+    max-height: 4vw;
 }
 
 .searchButton{
@@ -119,6 +153,8 @@ body{
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     transition: background-color 150ms;
+    max-height: 4vw;
+   
 }
 
 .searchButton:hover{
@@ -128,17 +164,18 @@ body{
 
 .searchIcon{
     width: 3vw;
-    min-width: 2vw;
+    max-width: 2vw;
+    max-height: 4vw;
 }
 
 .notificationIcon{
-    height: 5vw;
-    width: 5vw;
+    max-height: 5.5vw;
+    width: 100%;
 }
 
 .uploadIcon, .profileIcon{
-    height: 4vw;
-    width: 4vw;
+    max-height: 4vw;
+    width: 100%;
 }
 
 /* explore bar */
@@ -148,10 +185,10 @@ body{
     background-color: white;
     border: 0.1vw solid rgba(248, 243, 243, 0.918);
     overflow: hidden;
-    min-height: 5vw;
-    min-width: 10vh;
+    top: 10vw;
+    min-height: 8vw;
+    min-width: 40vh;
 }
-
 
 .category-section{
     display: flex;
@@ -161,8 +198,8 @@ body{
 .categories{
     padding: .4rem 2rem;
     margin-top: 10vh;
-    border-top: 1px solid #F9F9F9;
-    border-bottom: 1px solid #F9F9F9;
+    border-top: 0.133vw solid #F9F9F9;
+    border-bottom: 0.133vw solid #F9F9F9;
     
 }
 
@@ -234,9 +271,10 @@ body{
 }
 
 .featuredVideos{
-    padding: 12px;
+    padding: 1.5vw 0 1.5vw 2.5vw;
     color: #E578B2;
     margin-top: 10vw;
+    font-size: x-large;
 }
 
 .videoSection{
@@ -250,7 +288,7 @@ body{
 .videoBlock{
     background-color: rgba(248, 243, 243, 0.918);
     width: 15.6rem;
-    height: 13.1rem;
+    height: 11.1rem;
     border-radius: 2vw;
     box-shadow: 0.667vw 0.667vw 2vw 0.667vw #000000;
 }
@@ -273,7 +311,8 @@ body{
 }
 
 .videoDescriptionBox {
-
+    justify-content: center;
+    align-items: center;
     display: flex;
     margin: 0 .75rem 0 .4rem;
     
@@ -292,23 +331,17 @@ body{
 
 }
 
-.profileIcon{
-    height: 5.333vw;
-    width: 5.333vw;
-    border-radius: 50%;
-    margin-right: .75rem;
-}
 
-.videoTitle{
-    font-size: 1.1rem;
-    font-weight: bold;
 
-}
+
 
 .videoArtist{
     margin-bottom: .1rem;
     font-size:medium;
     transition: 150ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .videoArtist:hover{
