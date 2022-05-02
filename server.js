@@ -32,4 +32,4 @@ app.get('/', (req, res) => {
 })
 
 // Listen
-app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
+app.listen(process.env.PORT, () => console.log(`Listening on port: ${PORT}`))
