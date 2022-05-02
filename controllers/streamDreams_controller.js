@@ -29,11 +29,9 @@ router.get('/new', async (req, res, next) => {
 router.get('/:id/', async (req, res, next) => {
     try {
         const foundStreamDream = await db.StreamDream.findById(req.params.id)
-        const allComments = await db.Comment.find({stream: req.params.id})
         const allSongs = await db.Song.find({stream: req.params.id})
         const context = {
             oneStreamDream: foundStreamDream,
-            comments: allComments,
             songs: allSongs
         }
         return res.render('show.ejs' , context)
@@ -61,7 +59,7 @@ router.post('/', async (req, res, next) => {
 
 
 // Update
-router.put('/:id', async (req, res, next) => {
+router.put('/:streamDreamId', async (req, res, next) => {
     try {
         const updatedStreamDream = await db.StreamDream.findByIdAndUpdate(req.params.id, req.body);
         return res.redirect('/streamDream')
@@ -75,10 +73,9 @@ router.put('/:id', async (req, res, next) => {
 
 
 // Edit
-router.get('/:id/edit', async (req, res, next) => {
+router.get('/:streamDreamId/edit', async (req, res, next) => {
     try {
         const updateStreamDream = await db.StreamDream.findById(req.params.id);
-        let artistId = req.params.id
         const context = {
             streamDream: updateStreamDream
         }
@@ -93,11 +90,10 @@ router.get('/:id/edit', async (req, res, next) => {
 
 
 // Destroy - Delete
-router.delete('/:id', async (req, res, next) => {
+router.delete('/', async (req, res, next) => {
     try {
         const deleteStreamDream = await db.StreamDream.findbyIdAndDelete(req.params.id);
         const deletedComments = await db.Comment.deleteMany({streamDream: req.params.id})
-        const deletedSongs = await db.Song.deleteMany({streamDream: req.params.id})
         return res.redirect('/streamDream')
 
     } catch (error) {

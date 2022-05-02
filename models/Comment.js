@@ -11,9 +11,9 @@ const commentSchema = new mongoose.Schema({
         type: String,
         required: [true, 'provide comment with your review']
     },
-    stream: {
+    song: {
         type: mongoose.Types.ObjectId,
-        ref: 'StreamDream'
+        ref: 'Song'
     }
 }, { timestamps: true })
 
