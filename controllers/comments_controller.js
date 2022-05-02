@@ -38,6 +38,7 @@ router.post('/', async (req, res, next) => {
     try {
         const newComment = await db.Comment.create(req.body) 
         console.log(newComment)
+        // console.log(stream)
         res.redirect(`/songs/${newComment.stream}`)
 
     } catch (error){
