@@ -3,7 +3,7 @@
     <%- include('partials/head.ejs') %> 
     <%- include('partials/nav.ejs') %> 
 <body>
-    <form method="POST" action="/streamdream/<%= streamDream._id %>?_method=PUT">
+    <form method="POST" action="/streamDream/<%= streamDream._id %>?_method=PUT">
         <div>
             <label for="artist">Artist Name:</label>
             <input id="artist" name="artist" type="text" placeholder="<%= streamDream.artist %>"/>
