@@ -4,4 +4,4 @@ module.exports = {
     Song: require('./Song'),
 }
 
-mongoose.connect(process.env.MONGODB_URI || "http://localhost:4000/streamDream")
+app.connect(process.env.MONGODB_URI || "http://localhost:4000/streamDream")
