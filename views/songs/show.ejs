@@ -4,56 +4,51 @@
     <%- include('../partials/nav.ejs') %> 
 
 <body>
-
-   <div class="showPageVideo">
-      <div class="streamVideo">
-         <iframe width='550' height='350' src="<%= oneSong.link %>" title='YouTube video player'
-         frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-      </div>  
-      <div class="streamVideoInfo"><h3>
-         <p><%= oneSong.songName %></p>
-         <p>Album: <%= oneSong.album %></p>
-         <p>Release Date: <%= oneSong.releaseDate %></p> 
-      </h3></div>
-    </div>
-    <div>
-        <section>
-            <h2>Music Video Review</h2>
+   <div class="showPageVideoSection">
+      <div class="showPageVideo">
+         <div class="streamVideo">
+            <iframe class="largeVideo" src="<%= oneSong.link %>" title='YouTube video player'
+            frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+         </div>
+         <div class="dataWrapper">
+            <div class="artistProfile"> 
+               <div class="profileImageDiv">
+                  <img class="profileImage" src="<%= oneSong.stream.img %>" alt="artist image"/>
+               </div> 
+            </div>
+            <div class="streamVideoInfo"> 
+               <h1><%= oneSong.stream.artist %></h1>
+               <h3><%= oneSong.songName %></h3>
+               <h3>Album: <%= oneSong.album %></h3>
+               <h3>Release Date: <%= oneSong.releaseDate %></h3> 
+            </div>
+         </div> 
+           
+            
+         
+      </div>
+      <div class="commentSection">
+         <h2>Music Video Review</h2>
+         <div>
+            <h3>Add a Comment</h3>
+            <form method="POST" action="/comments">
+               <input name="rating" type="number"/>
+               <input name="content" type="text"/>
+               <input name="song" type="hidden" value="<%=oneSong._id %>"/>
+               <input type="submit" value="Post your Comment" />
+            </form>
+         </div>
+         <% for (let i = 0; i < comments.length; i++) { %> 
             <div>
-               <h3>Add a Comment</h3>
-               <form method="POST" action="/comments">
-                  <input name="rating" type="number"/>
-                  <input name="content" type="text"/>
-                  <input name="song" type="hidden" value="<%=oneSong._id %>"/>
-                  <input type="submit" value="Post your Comment" />
-               </form>
-            </div>
-            <% for (let i = 0; i < comments.length; i++) { %> 
-               <div>
-                  <h3>Rating: <%= comments[i].rating %> </h3>
-                  <p><%= comments[i].content %> </p>
-                  <form action="/comments/<%=comments[i]._id%>?_method=DELETE" method="POST">
-                  <input type="submit" value="Delete Comment" />
-               </form>
-            </div>
-            <% } %> 
-         </section>
-    </div>
-    <div class="artistName">
-        <h1><%= oneSong.stream.artist %></h1>
-     </div>
-     <div class="artistProfile"> 
-        <div class="profileImageDiv">
-           <img class="profileImage" src="<%= oneSong.stream.img %>" alt="artist image"/>
-        </div>
-     </div>
-  
-   
-
-   
-    
-    
-
-
+               <h3>Rating: <%= comments[i].rating %> </h3>
+               <p><%= comments[i].content %> </p>
+               <form action="/comments/<%=comments[i]._id%>?_method=DELETE" method="POST">
+               <input type="submit" value="Delete Comment" />
+            </form>
+         </div>
+         <% } %>   
+      </div>
+   </div>
+     
 </body>
 </html>
