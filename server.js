@@ -1,13 +1,13 @@
 const express = require('express');
 const methodOverride = require('method-override');
 const controllers = require('./controllers');
-const mongoose = require('mongoose');
+
 
 const app = express();
 
 require('./config/db.connection');
 
-const PORT = 4000;
+const PORT = process.env.PORT;
 
 
 app.set('view engine', 'ejs');
