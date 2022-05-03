@@ -58,7 +58,7 @@ router.post('/', async (req, res, next) => {
 
 
 // Update
-router.put('/:streamDreamId', async (req, res, next) => {
+router.put('/:id', async (req, res, next) => {
     try {
         const updatedStreamDream = await db.StreamDream.findByIdAndUpdate(req.params.id, req.body);
         return res.redirect('/streamDream')
@@ -72,7 +72,7 @@ router.put('/:streamDreamId', async (req, res, next) => {
 
 
 // Edit
-router.get('/:streamDreamId/edit', async (req, res, next) => {
+router.get('/:id/edit', async (req, res, next) => {
     try {
         const updateStreamDream = await db.StreamDream.findById(req.params.id);
         const context = {
