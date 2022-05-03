@@ -46,7 +46,6 @@ router.get('/:id/', async (req, res, next) => {
 // Create
 router.post('/', async (req, res, next) => {
     try {
-        // console.log(req.body)
         const createdStreamDream = await db.StreamDream.create(req.body);
         res.redirect('/streamDream')
 

@@ -35,7 +35,6 @@ router.get('/new', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
     try {
         const newComment = await db.Comment.create(req.body)
-        console.log('comment post route', req.body)
         res.redirect(`/songs/${newComment.song}`)
 
     } catch (error){
