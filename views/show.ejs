@@ -7,53 +7,42 @@
    <div class="header">
       <img class="headerImg" src = <%= oneStreamDream.headerImg %>>
    </div>
-   <div class="artistName">
-      <h1><%= oneStreamDream.artist %></h1>
-   </div>
-   <div class="artistProfile"> 
-      <div class="profileImageDiv">
-         <img class="profileImage" src="<%= oneStreamDream.img %>"/>
-      </div> 
-      <div class="artistInfo">
-         <h3><%= oneStreamDream.bio %></h3>
+
+   <div class="artistWrapper">
+      <div class="artistName">
+         <h1><%= oneStreamDream.artist %></h1>
+      </div>
+      <div class="artistProfile"> 
+         <div class="profileImageDiv">
+            <img class="profileImage" src="<%= oneStreamDream.img %>"/>
+         </div> 
+         <div class="artistInfo">
+            <h3><%= oneStreamDream.bio %></h3>
+         </div>
       </div>
    </div>
-
    
-   <div class="showPageVideo">
-      <div class="streamVideo">
-         <iframe width='560' height='315' class="videoContainer" src="<%= oneStreamDream.link %>" title='YouTube video player'
-         frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-      </div>  
-      <div class="streamVideoInfo"><h3>
-         <p><%= oneStreamDream.song %></p>
-         <p><%= oneStreamDream.album %></p>
-         <p><%= oneStreamDream.releaseDate %></p> 
-      </h3></div>
-      <div>
+   <h3 class="otherVideos">Videos by <%= oneStreamDream.artist %></h3>
+      <div class="artistVidSection">
          <% for (let i = 0; i < songs.length; i++) { %> 
-            <div>
-               <h3>Videos</h3>
-               <p>
-                  <div class="allVideosSection">
-                        <div class="videoBlock">
-                           <div class ="videoContainer">
-                              <a href="/songs/<%= songs[i]._id %> "><img class="streamDreamImg" src="<%= songs[i].songImg %>" alt="Stream Dream image" /></a>
-                           </div>
-                           <div class="videoDescription">
-                              <h3>
-                                 <%= songs[i].songName %>
-                              </h3>
-                           </div>
-                        </div>
+            
+               <div class="allVideosSection">
+                  <div class="artistVideoBlock">
+                     <div class ="artistVideoContainer">
+                        <a href="/songs/<%= songs[i]._id %> "><img class="streamVidImg" src="<%= songs[i].songImg %>" alt="Stream Dream image" /></a>
+                     </div>
+                     <div class="artistVideoDescription">
+                        <h3>
+                           <a class="showSong" href="/songs/<%= songs[i]._id %> "><%= songs[i].songName %></a>
+                        </h3>
+                     </div>
                   </div>
-               </p>
-            </form>
-         </div>
+               </div>
          <% } %> 
       </div>
-   </div>
    
+   
+  <a class="uploadSong" href="http://localhost:4000/songs/new">Upload a new video for <%= oneStreamDream.artist %></a>
   
    
 
