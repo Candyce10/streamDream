@@ -1,7 +1,7 @@
 const express = require('express');
 const methodOverride = require('method-override');
 const controllers = require('./controllers');
-
+const mongoose = require('mongoose');
 
 const app = express();
 
