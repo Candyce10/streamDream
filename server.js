@@ -29,7 +29,7 @@ app.use('/songs', controllers.songs)
 
 // Home Route
 app.get('/', (req, res) => {
-    res.send('Welcome to StreamDream!!!')
+    res.redirect('/streamDream')
 })
 
 // Listen
