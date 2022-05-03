@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 
 
@@ -7,23 +8,69 @@
     content: attr(data-hover);
     visibility: hidden;
     opacity: 0;
-    width: 140px;
+    width: max-content;
     background-color: black;
     color: #fff;
     text-align: center;
-    border-radius: 5px;
-    padding: 5px 0;
-    transition: opacity 1s ease-in-out;
-  
+    border-radius: 0.667vw;
+    padding: 0.667vw;
+    transition: opacity 150ms ease-in-out;
     position: absolute;
     z-index: 1;
-    left: 0;
+    right: 12vw;
     top: 110%;
   }
   
-  .hovertext:hover:before {
+.hovertext:hover:before {
     opacity: 1;
     visibility: visible;
+    z-index: 1;
+}
+
+.hovertextUpload:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: max-content;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.667vw;
+    padding: 0.667vw;
+    transition: opacity 150ms ease-in-out;
+    position: absolute;
+    z-index: 1;
+    right: 5vw;
+    top: 110%;
+  }
+  
+  .hovertextUpload:hover:before {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+  }
+
+.hovertextProfile:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: max-content;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.667vw;
+    padding: 0.667vw;
+    transition: opacity 150ms ease-in-out;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 110%;
+  }
+  
+  .hovertextProfile:hover:before {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
   }
 
 
@@ -105,11 +152,11 @@ body{
     text-decoration: none;
     color: #5E175B;
     font-family: 'Fascinate Inline', cursive;
-    font-size: 5vh;
+    font-size: 2.3vw;
     display: flex;
     align-items: center;
     max-height: 1vw;
-    min-width: 4vh;
+    min-width: 4vw;
     position: relative;
 }
 
@@ -194,7 +241,7 @@ body{
     overflow: hidden;
     top: 10vw;
     min-height: 8vw;
-    min-width: 40vh;
+    min-width: 40vw;
 }
 
 .category-section{
@@ -204,7 +251,7 @@ body{
 
 .categories{
     padding: .4rem 2rem;
-    margin-top: 10vh;
+    margin-top: 5vw;
     border-top: 0.133vw solid #F9F9F9;
     border-bottom: 0.133vw solid #F9F9F9;
     
@@ -213,9 +260,9 @@ body{
 .category{
     font-size: 3vh;
     margin-right: 1rem;
-    border: 1px solid #654E9D;
+    border: 0.133vw solid #654E9D;
     border-radius: 500px;
-    padding: 1vh;
+    padding: .5vw;
     transition: background-color 150ms;
     background-color: #A36CB2;
     word-wrap: none;
@@ -246,8 +293,6 @@ body{
 
 .artistProfile{
     display: flex;
-    
-    margin-right: 15px;
 }
 
 .profileImageDiv{
@@ -259,17 +304,21 @@ body{
 .profileImage{
     object-fit: cover;
     border-radius: 50%;
-    height: 10em;
-    width: 10em;
+    height: 10vw;
+    width: 10vw;
+    margin: 0 1vw;
     object-position: center;
 }
+
+
 
 .artistInfo{
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 90%;
     padding: 0, 0, 0, 15%;
+    letter-spacing: .1vw;
 }
 
 /* index page video images and info */
@@ -318,6 +367,7 @@ body{
     height: 8.1rem;
     margin: 4%; 
     border-radius: 1.5vw;
+    background-color: #a8bbbf;
 }
 
 .videoDescriptionBox {
@@ -448,16 +498,17 @@ body{
     background-color: rgba(248, 243, 243, 0.918);
     padding: 1vw;
     margin-left: 1.5vw;
-    width: 63vw;
+    display: block;
     border-radius: 2vw;
     box-shadow: 0.667vw 0.667vw 2vw 0.667vw #000000;
     align-self: flex-start;
+    justify-content: center;
 }
 
 
 .largeVideo{
-    width: 60vw;
-    height: 40vw;
+    width: 55vw;
+    height: 35vw;
     margin-bottom: 1vw;
     background-color: #a8bbbf;
     border-radius: 8px;
@@ -466,7 +517,6 @@ body{
 .streamVideoInfo, .artistVideoDescription{
     display: flex;
     flex-direction: column;
-    /* margin: 0.75rem .75rem 0 .4rem; */
     color: #A36CB2;
     letter-spacing: .4vh;
 }
@@ -476,20 +526,17 @@ body{
     border-radius: 2vw;
     box-shadow: 0.667vw 0.667vw 2vw 0.667vw #000000;
     height: auto;
-    width: 50vw;
     padding: 1vw;
     margin: 0 1vw;
-    align-self:flex-start
+    align-self:flex-start;
+    justify-content: center;
 }
 
 .artistWrapper{
-    /* display: flex; */
     margin: 1.5vw;
     background-color: rgba(248, 243, 243, 0.918);
     padding: 1vw;
-    /* width: 90%; */
     border-radius: 2vw;
-    /* justify-content: center; */
     box-shadow: 0.667vw 0.667vw 2vw 0.667vw #000000;
 }
 
@@ -564,3 +611,90 @@ body{
     margin: 4%; 
     border-radius: 1.5vw;
 }
+
+
+#commentForm {
+    background: #F9F9F9;
+    padding: 2vw;
+    margin: 10% 0;
+    width: 30vw;
+    box-shadow:  0 0.9rem 2rem 0 black;
+    line-height: 3.333vw;
+    border-radius: 1.333vw;
+    color:#5E175B;
+    letter-spacing: .1vw;
+
+}
+
+  #commentForm input[type="text"],
+  #commentForm input[type="number"],
+  #commentForm textarea {
+    width: 100%;
+    border: 0.133vw solid #ccc;
+    background: #FFF;
+    padding: 1vw;
+
+  }
+ 
+
+  #commentForm button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background-color: #5E175B;
+    color: #FFF;
+    margin: 0 0 0.667vw;
+    padding: 1vw;
+    font-size: 15px;
+    transition: 0.2s;
+    opacity: 0.6;
+    font-family: 'Audiowide', cursive;
+    letter-spacing: .1vw;
+  }
+
+  #commentForm button[type="submit"]:hover {
+    opacity: 1;
+  }
+  
+  #commentButton button[type="submit"]:active {
+    box-shadow: 0 3px rgb(35, 34, 34);
+    transform: translateY(1.5px);
+  }
+
+  #deleteButton{
+    cursor: pointer;
+    width: 50%;
+    border: none;
+    background-color: #5E175B;
+    color: #FFF;
+    margin: 0 0 0.667vw;
+    padding: .1vw;
+    height: 1.5vw;
+    font-size: 1.1vw;
+    transition: 0.2s;
+    opacity: 0.6;
+    font-family: 'Audiowide', cursive;
+    letter-spacing: .1vw;
+    float: right;
+    border-radius: 1vw;
+  }
+
+  #deleteButton:hover {
+    opacity: 1;
+  }
+  
+  #deleteButton:active {
+    box-shadow: 0 3px rgb(35, 34, 34);
+    transform: translateY(1.5px);
+  }
+
+.addedComment{
+    background-color: rgba(50, 48, 48, 0.5);
+    padding: .7vw .9vw;
+    color: white;
+    letter-spacing: .2vw;
+    border-radius: 2vw;
+    font-family: 'Roboto', sans-serif;
+    height: 6vw;
+}
+
