@@ -17,7 +17,7 @@
                </div> 
             </div>
             <div class="streamVideoInfo"> 
-               <h1><%= oneSong.stream.artist %></h1>
+               <h1><a class="videoArtistTitle" href="/streamDream/<%= oneSong.stream._id%>"><%= oneSong.stream.artist %></a></h1>
                <h3><%= oneSong.songName %></h3>
                <h3>Album: <%= oneSong.album %></h3>
                <h3>Release Date: <%= oneSong.releaseDate %></h3> 
@@ -34,7 +34,7 @@
             
             <form method="POST" action="/comments" id="commentForm">
                <h2>Video Review</h2>
-               <input name="rating" type="number" placeholder="Rating"/>
+               <input name="rating" type="number" placeholder="Rating 1-5"/>
                <br>
                <textarea name="content" type="text" placeholder="Add a comment..."></textarea>
                <input name="song" type="hidden" value="<%=oneSong._id %>"/>

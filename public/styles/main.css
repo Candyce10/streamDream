@@ -101,7 +101,11 @@ body{
     z-index: 1;
     top: 1rem;
     margin: 0;
-    font-family: 'Audiowide', cursive
+    font-family: 'Audiowide', cursive;
+    background-image: url(https://user-images.githubusercontent.com/98247684/165502380-500cd3b2-a238-45e7-8ad1-db79cd302a82.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 
@@ -247,6 +251,7 @@ body{
 .category-section{
     display: flex;
     position: fixed;
+    overflow: hidden;
 }
 
 .categories{
@@ -306,7 +311,7 @@ body{
     border-radius: 50%;
     height: 10vw;
     width: 10vw;
-    margin: 0 1vw;
+    margin: 0 3vw;
     object-position: center;
 }
 
@@ -379,7 +384,8 @@ body{
 .artistVideoDescription {
     justify-content: center;
     display: flex;
-    margin: 0 .75rem 0 .4rem;
+    margin: 0 .55rem 0 .4rem;
+    
 }
 
 .videoDescriptionBox a{
@@ -493,6 +499,8 @@ body{
 
 }
 
+
+
 .showPageVideo{
    
     background-color: rgba(248, 243, 243, 0.918);
@@ -510,8 +518,8 @@ body{
     width: 55vw;
     height: 35vw;
     margin-bottom: 1vw;
-    background-color: #a8bbbf;
     border-radius: 8px;
+    padding:.5vw
 }
 
 .streamVideoInfo, .artistVideoDescription{
@@ -544,6 +552,8 @@ body{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color:#5E175B;
 }
 
 
@@ -696,5 +706,10 @@ body{
     border-radius: 2vw;
     font-family: 'Roboto', sans-serif;
     height: 6vw;
+    margin-bottom: .2vw;
+    font-size: 1.4vw;
 }
 
+.videoArtistTitle{
+    text-decoration: none;
+}
