@@ -1,19 +1,19 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 const songSchema = new mongoose.Schema({
-    songName:{
+    songName: {
         type: String,
         required: [true, 'song cannot be empty']
     },
-    releaseDate:{
+    releaseDate: {
         type: Number,
         required: [true, 'date cannot be empty']
     },
-    link:{
+    link: {
         type: String,
         required: [true, 'link cannot be empty']
     },
-    album:{
+    album: {
         type: String,
         required: [true, 'album cannot be empty']
     },
@@ -28,5 +28,5 @@ const songSchema = new mongoose.Schema({
 })
 
 
-const Song= mongoose.model("Song", songSchema);
+const Song = mongoose.model("Song", songSchema)
 module.exports = Song

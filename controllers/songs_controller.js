@@ -15,6 +15,22 @@ router.get('/', async (req, res, next) => {
     }
 })
 
+// New
+router.get('/new', async (req, res, next) => {
+    try {
+        const allStreamDream = await db.StreamDream.find({})
+        const context = { streamDreams: allStreamDream}
+        res.render('songs/new.ejs', context)
+
+    } catch (error){
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+})
+
+
+
 // Show
 router.get('/:songId', async (req, res, next) => {
     try {
@@ -23,6 +39,7 @@ router.get('/:songId', async (req, res, next) => {
             path: 'stream',
             select: 'artist headerImg img'
         });
+        // console.log(foundSong)
         const allComments = await db.Comment.find({song: req.params.songId})
         const context = {
             oneSong: foundSong,
@@ -38,19 +55,6 @@ router.get('/:songId', async (req, res, next) => {
     }
 })
 
-// New
-router.get('/new', async (req, res, next) => {
-    try {
-        const allStreamDream = await db.StreamDream.find({})
-        const context = { streamDreams: allStreamDream}
-        res.render('songs/new.ejs', context)
-
-    } catch (error){
-        console.log(error);
-        req.error = error;
-        return next();
-    }
-})
 
 
 // Create
